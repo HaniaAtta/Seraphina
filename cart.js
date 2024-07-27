@@ -54,7 +54,8 @@ function addToCart(event) {
   }
 
   console.log('Cart:', cart);
-
+  // Save cart to local storage
+  localStorage.setItem('cart', JSON.stringify(cart));
   updateCartCount(); 
 }
 

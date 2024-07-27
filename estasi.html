@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap">
+      <link rel="icon" type="image/x-icon" href="Images/Logo.png">
+
+      <link rel="stylesheet" href="Nav.css">
+      <link rel="stylesheet" href="footer.css">
+      <link rel="stylesheet" href="aura.css">
+      
+      <link rel="stylesheet" href="cart.css">
+      <title>Estasi</title>
+   </head>
+   <body>
+
+    <!--Nav Bar-->
+    
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="home.html" class="nav__logo"><img src="Images/Logo.png" alt=""></a>
+
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="women.html" class="nav__link">Women</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="fragrance.html" class="nav__link">Perfumes</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="accesories.html" class="nav__link">Accessories</a>
+                  </li>
+
+                
+
+                 
+               </ul>
+
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div>
+            </div>
+
+            <div class="nav__actions">
+               
+                <i class="ri-shopping-cart-2-fill nav_cart" id="cart"></i><span id="cart-count">0</span>
+
+               <i class="ri-search-line nav__search" id="search-btn"></i>
+
+               <i class="ri-user-line nav__login" id="login-btn"></i>
+
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line"></i>
+               </div>
+            </div>
+         </nav>
+      </header>
+
+      <div class="search" id="search">
+         <form action="" class="search__form">
+            <i class="ri-search-line search__icon"></i>
+            <input type="search" placeholder="What are you looking for?" class="search__input">
+         </form>
+
+         <i class="ri-close-line search__close" id="search-close"></i>
+      </div>
+
+      <!---==================== LOGIN ====================-->
+      <div class="login" id="login">
+         <form action="" class="login__form">
+            <h2 class="login__title">Log In</h2>
+            
+            <div class="login__group">
+               <div>
+                  <label for="email" class="login__label">Email</label>
+                  <input type="email" placeholder="Write your email" id="email" class="login__input">
+               </div>
+               
+               <div>
+                  <label for="password" class="login__label">Password</label>
+                  <input type="password" placeholder="Enter your password" id="password" class="login__input">
+               </div>
+            </div>
+
+            <div>
+               <p class="login__signup">
+                  You do not have an account? <a href="#" id="signup-btn">Sign up</a>
+               </p>
+   
+               <a href="#" class="login__forgot">
+                  You forgot your password?
+               </a>
+               <button type="submit" class="login__button">Log In</button>
+            </div>
+         </form>
+
+         <i class="ri-close-line login__close" id="login-close"></i>
+      </div>
+
+
+
+      <div class="signup" id="signup"> 
+         <form action="" class="signup__form"> 
+            <h2 class="signup__title">Sign Up</h2>
+      <div class="signup__group">
+         <div>
+            <label for="name" class="signup__label">Full Name</label>
+            <input type="text" placeholder="Write your full name" id="name" class="signup__input">
+         </div>
+         
+         <div>
+            <label for="email" class="signup__label">Email</label>
+            <input type="email" placeholder="Write your email" id="email" class="signup__input">
+         </div>
+         
+         <div>
+            <label for="password" class="signup__label">Password</label>
+            <input type="password" placeholder="Enter your password" id="password" class="signup__input">
+         </div>
+         
+         <div>
+            <label for="confirm-password" class="signup__label">Confirm Password</label>
+            <input type="password" placeholder="Confirm your password" id="confirm-password" class="signup__input">
+         </div>
+      </div>
+    
+      <div>
+         <p class="signup__login">
+            You already have an account? <a href="#" id="login-link">Log in</a>
+         </p>
+    
+<button type="submit" class="signup__button">Sign Up</button>
+      </div>
+   </form>
+   <i class="ri-close-line signup__close" id="signup-close"></i>
+   
+   </div>
+<br>
+<!--=============Home-Main==================-->
+
+<div>
+    <br>
+    <br><br><br><br><br><br>
+</div>
+
+
+
+
+<div class="cart" id="cart-container">
+    <i class="ri-close-line cart__close" id="cart-close"></i>
+    <ul class="cart-list">
+      <li class="cart-item">
+      </li>
+      
+      <li class="cart-item">
+      </li>
+    </ul>
+  </div>
+  <!--main code-->
+
+  <div class="product-page">
+    <div class="product-image">
+      <img src="Images/p4.png" alt="AURA Perfumes P000JOY-120-999">
+    </div>
+    <div class="product-info">
+      <h1>Estasi</h1>
+      <p>Estasi-50 ML  |   In-Stock</p>
+      <br>
+      <p>Price: <span>PKR 3700 </span> <br><span class="gst"> GST Inclusive</span></p>
+      <br>
+      <div class="product-description">
+ 
+         <div class="quantity-container">
+           <label for="quantity">Qty:</label>
+           <br>
+           <br>
+           
+           <button class="decrement-btn">-</button>
+           <input type="number" id="quantity" value="1" min="1" max="40">
+           <button class="increment-btn">+</button>
+           
+         </div>
+    
+       </div>
+       <p>In Stock, Ready To Ship</p>
+       <p>Weight: <span>0.5 kg</span></p>
+<br>
+<div class="info">
+   <button data-id="1" class="add-to-cart">Add to Cart</button>
+  
+ </div>
+ <br>
+ <p>Disclaimer: Product color may vary slightly due to photographic lighting or your device settings.</p>
+ <p><i class="ri-ship-2-line" ></i>         <span>       </span>  Shipping: 3 to 5 working days nationwide shipping</p>
+ <br><br>
+ <h2>Description</h2>
+ <br>
+      <p><b>Type:</b>AROMATIC | FLORAL</p><br>
+      <p><b>Top Notes:</b> RHUBARB, LEAFY, FRUITY NOTES, TAGETES & ORANGE FLOWERS</p><br>
+      <p><b>Middle Notes:</b>VIOLET, VANILLA, TUBEROSE, HELIOTROPE & PRECIOUS WOODS</p><br>
+      <p><b>Base Notes:</b> AMBER NOTES, TONKA BEAN, BALSAMIC NOTES & MUSKY NOTES</p><br><br>
+      <p><B>Size:</B> 50-ML</p>
+   
+
+    
+    </div>
+    </div>
+<br>
+<br>
+
+<hr>
+    <div class="you-may-also-like">
+      <h2>You May Also Like</h2>
+      <div class="perfume-cards">
+      <div class="perfume-card">
+        <a href="aura.html"><img src="Images/p1.png" alt="Perfume 2"></a>
+        <div class="info">
+  
+        <h2>Aura</h2>
+        <p>PKR 3890</p>
+            
+        </div>
+      </div>
+      
+    <div class="perfume-card">
+        <a href="celeste.html"><img src="Images/p2.png" alt="Perfume 2"></a>
+        <div class="info">
+        <h2>Celeste</h2>
+        <p>PKR 4000</p>
+            
+      </div>
+      </div>
+      <div class="perfume-card">
+        <a href="eterea.html"> <img src="Images/p3.png" alt="Perfume 2"></a>
+        <div class="info">
+        <h2>Eterea</h2>
+        <p>PKR 4200</p>
+            
+      </div>
+      </div>
+      <div class="perfume-card">
+        <a href="grazia.html"> <img src="Images/p6.png" alt="Perfume 2"></a>
+        <div class="info">
+        <h2>Grazia</h2>
+        <p>PKR 4500</p>
+            
+      </div>
+      </div>
+      <div class="perfume-card">
+        <a href="sogno.html"><img src="Images/p7.png" alt="Perfume 2"></a>
+        <div class="info">
+        <h2>Sogno</h2>
+        <p>PKR 3000</p>
+            
+        </div>
+      </div>
+      <div class="perfume-card">
+        <a href="alto.html"><img src="Images/p5.png" alt="Perfume 2"></a>
+        <div class="info">
+        <h2>Alato</h2>
+        <p>PKR 5000</p>
+            
+        </div>
+      </div>
+    </div></div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<!--==================FOOTER=========================-->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <img src="Images/Logo.png" alt="Logo" class="logo">
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <h5>Address</h5>
+        <br>
+        <p>Seraphina,Pakistan,Lahore</p>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <h5>Contact</h5>
+<br>          <p>Phone: <a href="tel:+92111-48709051">+92111-1199994</a></p>
+        <p>Email: <a href="mailto:seraphyne19@gmail.com">seraphina@gmail.com</a></p>
+      </div>
+      <div class="col-md-2 col-sm-6">
+        <h5>Follow Us</h5>
+        <br>
+        <p><a href="https://www.instagram.com/sera_phina19/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-sm-12">
+        <h5>Stay Up-to-Date</h5>
+        <p>Subscribe to our newsletter to receive updates and promotions:</p>
+        <form id="form">
+          <div class="field">
+              
+            <input type="email" name="email" id="email" placeholder="Email Address">
+          </div>
+        
+          <input type="submit" id="button" value="Send Email" >
+        </form>
+
+      </div>
+
+      <div class="col-md-4 col-sm-12">
+        <h5>About Us</h5>
+        <br>
+        <p><a href="privacypolicy.html">Privacy Policy</a></p>
+      </div>
+    </div>
+    <div class="row">
+     
+      <div class="col-md-12">
+        <p class="copyright">@Copyright 2024 Seraphina. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+emailjs.init('W84UmnDPDoC6eRfGJ')
+</script>
+<script >
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+.addEventListener('submit', function(event) {
+event.preventDefault();
+
+btn.value = 'Sending...';
+
+const serviceID = 'default_service';
+const templateID = 'template_jk2svia';
+
+emailjs.sendForm(serviceID, templateID, this)
+.then(() => {
+  btn.value = 'Send Email';
+  alert('Sent!');
+}, (err) => {
+  btn.value = 'Send Email';
+  alert(JSON.stringify(err));
+});
+});
+</script>
+
+
+
+      
+      <!--===============  JS ===============-->
+
+      <script src="nav.js"></script>
+
+<script  src="aura.js"></script>
+   </body>
+</html>

@@ -1,0 +1,464 @@
+
+
+@media screen and (min-width: 1023px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+button {
+  font-family: "Syne", sans-serif;
+  font-size: .938rem;
+}
+
+body {
+  background-color: hsl(0, 0%, 97%);
+  color: hsl(240, 2%, 20%);
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+}
+
+.main__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+.search{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(24px); 
+  padding: 8rem 1.5rem 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s;
+}
+
+.login,.signup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: hsla(240, 3%, 15%, 0.1);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px); 
+  padding: 8rem 1.5rem 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s;
+}
+
+.search__close{
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  color: hsl(60, 3%, 94%);
+  cursor: pointer;
+}
+.login__close, .signup__close  {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  color: hsl(230, 75%, 15%);
+  cursor: pointer;
+}
+
+/*===============  Nav Bar ===============*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: hsl(240, 1%, 14%);
+  box-shadow: 0 2px 16px hsla(240, 1%, 42%, 0.15);
+  z-index: 100;
+  color: #fff;
+}
+
+.nav {
+  height: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo img {
+    height: 6.2rem; 
+    width: auto;
+    margin-left: -1rem;
+  }
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.nav__search, 
+.nav__login, 
+.nav__toggle, 
+.nav__close,  .nav_cart {
+  font-size: 1.25rem;
+  color: hsl(230, 14%, 92%);
+  cursor: pointer;
+  transition: color .4s;
+}
+
+:is(.nav__logo, .nav__search, .nav__login, .nav__toggle, .nav__link,  .nav_cart):hover {
+  color: hsl(38, 51%, 59%);
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1023px) {
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color:hsl(240, 1%, 14%);
+    box-shadow: 0 12px 16px hsla(240, 1%, 35%, 0.15);
+    width: 100%;
+    padding-block: 4.5rem 4rem;
+    transition: top .4s;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+  text-align: center;
+}
+
+.nav__link {
+  color: hsl(228, 29%, 97%);
+  font-weight: 600;
+  transition: color .4s;
+}
+
+.nav__close {
+  position: absolute;
+  top: 1.15rem;
+  right: 1.5rem;
+}
+
+.show-menu {
+  top: 0;
+}
+
+/*=============== SEARCH ===============*/
+.search__form {
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+  background-color: hsl(230, 100%, 97%);
+  box-shadow: 0 8px 32px hsla(230, 75%, 15%, .2);
+  padding-inline: 1rem;
+  border-radius: .5rem;
+  transform: translateY(-1rem);
+  transition: transform .4s;
+}
+
+.search__icon {
+  font-size: 1.25rem;
+  color: hsl(230, 75%, 15%);
+}
+
+.search__input {
+  width: 100%;
+  padding-block: 1rem;
+  background-color: hsl(230, 100%, 97%);
+  color: hsl(230, 12%, 40%);
+}
+
+.search__input::placeholder {
+  color: hsl(230, 12%, 40%);
+}
+
+/* Show search */
+.show-search {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.show-search .search__form {
+  transform: translateY(0);
+}
+
+/*=============== LOGIN ===============*/
+.login__form, 
+.login__group,.signup__form  {
+  display: grid;
+}
+
+.login__form, .signup__form  {
+  background-color: hsl(240, 1%, 33%);
+  padding: 2rem 1.5rem 2.5rem;
+  box-shadow: 0 8px 32px hsla(230, 75%, 15%, .2);
+  border-radius: 1rem;
+  row-gap: 1.25rem;
+  text-align: center;
+  transform: translateY(-1rem);
+  transition: transform .4s;
+}
+
+.login__title,.signup__title {
+  font-size: 1.25rem;
+  color: hsl(231, 14%, 90%);
+}
+
+.login__group {
+  row-gap: 1rem;
+}
+
+.login__label, .signup__label {
+  display: block;
+  text-align: initial;
+  color: hsl(0, 28%, 95%);
+  font-weight: 500;
+  margin-bottom: .25rem;
+}
+
+.login__input,.signup__input {
+  width: 100%;
+  background-color: hsl(230, 100%, 97%);
+  border: 2px solid hsl(230, 25%, 80%);;
+  padding: 1rem;
+  border-radius: .5rem;
+  color: hsl(230, 12%, 40%);
+}
+
+.login__input::placeholder , .signup__input::placeholder{
+  color: hsl(230, 12%, 40%);
+}
+
+.login__signup,.signup__login {
+  margin-bottom: .5rem;
+  color: rgb(244, 242, 242);
+}
+
+.login__signup a , .signup__login a{
+  color: hsl(38, 51%, 59%);
+}
+
+.login__signup a:hover ,.signup__login a:hover{
+    text-decoration: underline;
+    
+}
+
+
+.login__forgot {
+  display: inline-block;
+  color: hsl(38, 51%, 59%);
+  margin-bottom: 1.25rem;
+}
+.login__forgot:hover{
+    text-decoration: underline;
+}
+
+.login__button,  .signup__button  {
+  display: inline-block;
+  background-color: hsl(38, 51%, 59%);
+  width: 100%;
+  color: #3b3b3b;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: box-shadow .4s;
+}
+
+.login__button:hover,.signup__button:hover {
+  box-shadow: 0 4px 24px hsla(240, 3%, 7%, 0.4);
+}
+
+/* Show login */
+.show-login, .show-signup {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.show-login .login__form, .show-signup.signup__form {
+  transform: translateY(0);
+}
+
+/*=============== BREAKPOINTS ===============*/
+@media screen and (min-width: 576px) {
+  .search,
+  .login,.signup{
+    padding-top: 10rem;
+  }
+
+
+  .search__form {
+    max-width: 450px;
+    margin-inline: auto;
+  }
+
+  .search__close,
+  .login__close, .signup__close  {
+    width: max-content;
+    top: 5rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    font-size: 2rem;
+  }
+
+  .login__form,.signup__form {
+    max-width: 400px;
+    margin-inline: auto;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1023px) {
+  .nav {
+    height: calc(4.5rem + 2rem);
+    column-gap: 3rem;
+  }
+  .nav__close, 
+  .nav__toggle {
+    display: none;
+  }
+  .nav__menu {
+    margin-left: auto;
+  }
+  .nav__list {
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+
+  .login__form,.signup__form {
+    padding: 3rem 2rem 4.5rem;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .container {
+    margin-inline: auto;
+  }
+}
+
+
+
+
+@media screen and (max-width: 576px) {
+    .nav__logo img {
+        height: 4.38rem; 
+        margin-left: -0.5rem;
+      }
+    }
+    
+    @media screen and (min-width: 577px) and (max-width: 1023px) {
+    .nav__logo img {
+        height: 4.3rem; 
+        margin-left: -0.75rem;
+      }
+    }
+    
+    @media screen and (min-width: 1024px) {
+    .nav__logo img {
+        height: 6.2rem; 
+        margin-left: -1rem;
+      }
+    }
+    
+
+
+    .signup {
+      display: none; 
+    }
+    
+    .show-signup {
+      display: block; 
+    }
+
+
+
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    
+    .popup.success {
+      background-color: hsl(240, 1%, 13%);
+      color: hsl(38, 51%, 59%);
+    }
+    
+    .popup.error {
+      background-color: #ffe6e6;
+      color: #b12626;
+    }
+    
+    .ri-success-line, .ri-error-line {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+
+

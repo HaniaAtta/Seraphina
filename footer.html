@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="footer.css">
+    <title>Footer</title>
+</head>
+<body>
+
+    <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <img src="Images/Logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <h5>Address</h5>
+              <p>seraphina,Pakistan,Lahore</p>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <h5>Contact</h5>
+              <p>Phone: <a href="tel:+92111-48709051">+92111-1199994</a></p>
+              <p>Email: <a href="mailto:seraphyne19@gmail.com">seraphina@gmail.com</a></p>
+            </div>
+            <div class="col-md-2 col-sm-6">
+              <h5>Follow Us</h5>
+              <p><a href="https://www.instagram.com/example/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8 col-sm-12">
+              <h5>Stay Up-to-Date</h5>
+              <p>Subscribe to our newsletter to receive updates and promotions:</p>
+              <form id="form">
+                <div class="field">
+                    
+                  <input type="email" name="email" id="email" placeholder="Email Address">
+                </div>
+              
+                <input type="submit" id="button" value="Send Email" >
+              </form>
+
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+              <h5>About Us</h5>
+              <p><a href="about-us.html">Learn more about our Brand</a></p>
+              <p><a href="privacy-policy.html">Privacy Policy</a></p>
+            </div>
+          </div>
+          <div class="row">
+           
+            <div class="col-md-12">
+              <p class="copyright">@Copyright 2024 Seraphina. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('W84UmnDPDoC6eRfGJ')
+</script>
+<script >
+    const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_jk2svia';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+.heading {
+    font-size: 40px;
+    color: hsl(240, 1%, 13%);
+    text-align: center; 
+    font-family: 'Playfair Display', serif;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+ }
+
+    
+    @media only screen and (max-width: 768px) {
+       .heading{
+        font-size: 18px;
+        padding-top: 0rem;
+
+       } 
+       .exp1{
+        font-size: 1rem;
+    }
+    .exp{
+        font-size: 0.8rem;
+    }
+    }
+    @media only screen and (max-width: 480px) {
+        .heading{
+            font-size: 16px;
+        padding-top: 0rem;
+
+        }
+        .exp1{
+            font-size: .7rem;
+        }
+        .exp{
+            font-size: .4rem;
+        }
+    }
+    .exp1{
+        padding-top: 2rem;
+        font-size: 1.9rem;
+    }
+    .exp {
+        padding-top: 2rem;
+
+        font-size: 1.2rem;
+        color: hsl(240, 1%, 13%);
+        font-family: "Syne", sans-serif;
+        text-align: center;
+        padding-bottom: 1rem;
+      }
+.slideshow-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex; 
+    flex-wrap: nowrap; }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .slideshow {
+      height: 100vh;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .slideshow {
+      height: 100vh;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    .slideshow {
+      flex-wrap: wrap;
+    }
+    .slide {
+      flex-basis: 100%;
+    }
+  }
+
+
+  
+  
+  .perfume-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  
+  .perfume-card {
+    position: relative;
+    width: 28rem;
+    height: 40em;
+    margin: 40px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /
+  }
+  
+  .perfume-card:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .perfume-card img {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.3s; 
+  }
+  
+  .perfume-card:hover img {
+    opacity: 0.7;}
+  
+  .perfume-card .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 4rem;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    opacity: 0; 
+    transition: opacity 0.3s; 
+  }
+  
+  .perfume-card:hover .info {
+    opacity: 1; 
+  }
+  
+  .perfume-card button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    margin-top: 1rem;
+    padding: 9px 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .perfume-card button:hover {
+    background-color: #444;
+  }
+  
+  
+  
+@media only screen and (max-width: 768px) {
+    .perfume-card {
+      width: 20rem;
+      height: 22rem;
+      margin: 15px;
+    }
+    .perfume-card img {
+      height: 22rem;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .perfume-card {
+      width: 15rem;
+      height: 17rem;
+      margin: 10px;
+    }
+    .perfume-card img {
+      height: 17rem;
+    }
+  }

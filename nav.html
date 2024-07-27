@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap">
+      <link rel="icon" type="image/x-icon" href="Images/Logo.png">
+
+      <link rel="stylesheet" href="Nav.css">
+
+      <title>Nav Bar</title>
+   </head>
+   <body>
+    <!--Nav Bar-->
+    
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="#" class="nav__logo"><img src="Images/Logo.png" alt=""></a>
+
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#" class="nav__link">Women</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#" class="nav__link">Men</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#" class="nav__link">Accessories</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#" class="nav__link">Sale</a>
+                  </li>
+
+               
+               </ul>
+
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div>
+            </div>
+
+            <div class="nav__actions">
+               <a href="#" class="nav__link">Shopping Cart <i class="ri-shopping-cart-fill"></i></a>
+               <i class="ri-search-line nav__search" id="search-btn"></i>
+
+               <i class="ri-user-line nav__login" id="login-btn"></i>
+
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line"></i>
+               </div>
+            </div>
+         </nav>
+      </header>
+
+      <div class="search" id="search">
+         <form action="" class="search__form">
+            <i class="ri-search-line search__icon"></i>
+            <input type="search" placeholder="What are you looking for?" class="search__input">
+         </form>
+
+         <i class="ri-close-line search__close" id="search-close"></i>
+      </div>
+
+      <!---==================== LOGIN ====================-->
+      <div class="login" id="login">
+         <form action="" class="login__form">
+            <h2 class="login__title">Log In</h2>
+            
+            <div class="login__group">
+               <div>
+                  <label for="email" class="login__label">Email</label>
+                  <input type="email" placeholder="Write your email" id="email" class="login__input">
+               </div>
+               
+               <div>
+                  <label for="password" class="login__label">Password</label>
+                  <input type="password" placeholder="Enter your password" id="password" class="login__input">
+               </div>
+            </div>
+
+            <div>
+               <p class="login__signup">
+                  You do not have an account? <a href="#" id="signup-btn">Sign up</a>
+               </p>
+   
+               <a href="#" class="login__forgot">
+                  You forgot your password?
+               </a>
+               <button type="submit" class="login__button">Log In</button>
+            </div>
+         </form>
+
+         <i class="ri-close-line login__close" id="login-close"></i>
+      </div>
+
+
+
+
+
+
+
+
+
+      <div class="signup" id="signup"> 
+         <form action="" class="signup__form"> 
+            <h2 class="signup__title">Sign Up</h2>
+      <div class="signup__group">
+         <div>
+            <label for="name" class="signup__label">Full Name</label>
+            <input type="text" placeholder="Write your full name" id="name" class="signup__input">
+         </div>
+         
+         <div>
+            <label for="email" class="signup__label">Email</label>
+            <input type="email" placeholder="Write your email" id="email" class="signup__input">
+         </div>
+         
+         <div>
+            <label for="password" class="signup__label">Password</label>
+            <input type="password" placeholder="Enter your password" id="password" class="signup__input">
+         </div>
+         
+         <div>
+            <label for="confirm-password" class="signup__label">Confirm Password</label>
+            <input type="password" placeholder="Confirm your password" id="confirm-password" class="signup__input">
+         </div>
+      </div>
+    
+      <div>
+         <p class="signup__login">
+            You already have an account? <a href="#" id="login-link">Log in</a>
+         </p>
+    
+<button type="submit" class="signup__button">Sign Up</button>
+      </div>
+   </form>
+   <i class="ri-close-line signup__close" id="signup-close"></i>
+   
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      <!--===============  JS ===============-->
+      <script src="nav.js"></script>
+   </body>
+</html>

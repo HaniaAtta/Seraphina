@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap">
+      <link rel="icon" type="image/x-icon" href="Images/Logo.png">
+
+      <link rel="stylesheet" href="Nav.css">
+      <link rel="stylesheet" href="footer.css">
+      <link rel="stylesheet" href="billing.css">
+
+
+      <title>Checkout</title>
+   </head>
+   <body>
+
+    <!--Nav Bar-->
+    
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="home.html" class="nav__logo"><img src="Images/Logo.png" alt=""></a>
+
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="women.html" class="nav__link">Women</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="fragrance.html" class="nav__link">Perfumes</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="accesories.html" class="nav__link">Accessories</a>
+                  </li>
+
+
+                 
+               </ul>
+
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div>
+            </div>
+
+            <div class="nav__actions">
+               
+                <i class="ri-shopping-cart-2-fill nav_cart" id="cart"></i><span id="cart-count">0</span>
+
+               <i class="ri-search-line nav__search" id="search-btn"></i>
+
+               <i class="ri-user-line nav__login" id="login-btn"></i>
+
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line"></i>
+               </div>
+            </div>
+         </nav>
+      </header>
+
+      <div class="search" id="search">
+         <form action="" class="search__form">
+            <i class="ri-search-line search__icon"></i>
+            <input type="search" placeholder="What are you looking for?" class="search__input">
+         </form>
+
+         <i class="ri-close-line search__close" id="search-close"></i>
+      </div>
+
+      <!---==================== LOGIN ====================-->
+      <div class="login" id="login">
+         <form action="" class="login__form">
+            <h2 class="login__title">Log In</h2>
+            
+            <div class="login__group">
+               <div>
+                  <label for="email" class="login__label">Email</label>
+                  <input type="email" placeholder="Write your email" id="email" class="login__input">
+               </div>
+               
+               <div>
+                  <label for="password" class="login__label">Password</label>
+                  <input type="password" placeholder="Enter your password" id="password" class="login__input">
+               </div>
+            </div>
+
+            <div>
+               <p class="login__signup">
+                  You do not have an account? <a href="#" id="signup-btn">Sign up</a>
+               </p>
+   
+               <a href="#" class="login__forgot">
+                  You forgot your password?
+               </a>
+               <button type="submit" class="login__button">Log In</button>
+            </div>
+         </form>
+
+         <i class="ri-close-line login__close" id="login-close"></i>
+      </div>
+
+
+
+      <div class="signup" id="signup"> 
+         <form action="" class="signup__form"> 
+            <h2 class="signup__title">Sign Up</h2>
+      <div class="signup__group">
+         <div>
+            <label for="name" class="signup__label">Full Name</label>
+            <input type="text" placeholder="Write your full name" id="name" class="signup__input">
+         </div>
+         
+         <div>
+            <label for="email" class="signup__label">Email</label>
+            <input type="email" placeholder="Write your email" id="email" class="signup__input">
+         </div>
+         
+         <div>
+            <label for="password" class="signup__label">Password</label>
+            <input type="password" placeholder="Enter your password" id="password" class="signup__input">
+         </div>
+         
+         <div>
+            <label for="confirm-password" class="signup__label">Confirm Password</label>
+            <input type="password" placeholder="Confirm your password" id="confirm-password" class="signup__input">
+         </div>
+      </div>
+    
+      <div>
+         <p class="signup__login">
+            You already have an account? <a href="#" id="login-link">Log in</a>
+         </p>
+    
+<button type="submit" class="signup__button">Sign Up</button>
+      </div>
+   </form>
+   <i class="ri-close-line signup__close" id="signup-close"></i>
+   
+   </div>
+<br>
+<!--=============Home-Main==================-->
+<br><br><br><br><br>
+
+<main>
+   <section class="checkout-container">
+      <div id="cart-summary">
+          <h2>Cart Summary</h2>
+          <ul id="cart-items"></ul>
+          <p id="total-amount"></p>
+      </div>
+      <div class="checkout-form">
+          <form id="billing-form" onsubmit="completeOrder(event)">
+            <h3 class="let" > Have an account? Log In  </h3>
+<br><br>
+
+<h2>Shipping address</h2>
+<br><br>
+              <input type="text" id="names" name="name" placeholder="Name" style="width: 40%;"><br><br>
+              <input type="email" id="emails" name="email" placeholder="Email"><br><br>
+              <input type="text" id="address" name="address" placeholder="Address"><br><br>
+              <input type="text" id="city" name="city" placeholder="City" style="width: 40%;"><br><br>
+              <input type="text" id="province" name="province" placeholder="Province" style="width: 40%;"><br><br>
+              <input type="text" id="country" name="country" placeholder="Country" style="width: 40%;"><br><br>
+              <input type="text" id="zip" name="zip" placeholder="Zip" style="width: 40%;"><br><br>
+              <select id="payment-method" name="payment-method">
+                  <option value="cash-on-delivery">Cash on Delivery</option>
+              </select><br><br>
+              <button type="submit" id="complete-order">Place Order</button>
+          </form>
+      </div>
+  </section>
+
+
+
+
+
+
+
+
+
+      
+
+      <script src="nav.js"></script>
+<script src="billing.js"></script>
+
+      <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <script type="text/javascript">
+      emailjs.init('W84UmnDPDoC6eRfGJ')
+    </script>
+<script>
+   const form = document.getElementById('billing-form');
+   const btn = document.getElementById('complete-order');
+ 
+   form.addEventListener('submit', function(event) {
+     event.preventDefault();
+ 
+     btn.textContent = 'Sending...';
+ 
+     const name = document.querySelector('#names').value;
+     const email = document.querySelector('#emails').value.trim();
+     const address = document.querySelector('#address').value.trim();
+     const city = document.querySelector('#city').value;
+    const province = document.querySelector('#province').value;
+    const country = document.querySelector('#country').value;
+    const zip = document.querySelector('#zip').value;
+
+    const orderSummaryText = Object.values(cart).map((item, index) => {
+  return `
+    ${item.name} x ${item.quantity} = ${item.price}
+  `;
+}).join('\n');
+
+const totalAmountText = `
+  Subtotal: Pkr ${totalAmount.toFixed(2)}
+  Delivery Charges: Pkr ${deliveryCharges}
+  Total Amount: Pkr ${totalAmountWithDelivery.toFixed(2)}
+`;
+
+ 
+     console.log('Name input:', document.querySelector('#names'));
+     console.log('Email input:', document.querySelector('#emails'));
+     console.log('Name:', name);
+     console.log('Email:', email);
+     console.log('Address', address )
+     console.log(orderSummaryText)
+ 
+     const serviceID = 'service_e9imgqv';
+     const templateID = 'template_zerawf8';
+ 
+     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+     if (!emailRegex.test(email)) {
+       alert('Please enter a valid email address');
+       return;
+     }
+ 
+     const templateParams = {
+       name: name,
+       email: email,
+       address: `${address}, ${city}, ${province}, ${country}, ${zip}`,
+       orderSummary: orderSummaryText + '\n' + totalAmountText
+     };
+ 
+     console.log('Template params:', templateParams);
+ 
+     emailjs.send(serviceID, templateID, templateParams)
+      .then(() => {
+         btn.textContent = 'Place Order';
+         alert('Email sent!');
+       }, (err) => {
+         btn.textContent = 'Place Order';
+         alert(JSON.stringify(err));
+       });
+   });
+ </script>
+
+   </body>
+</html>

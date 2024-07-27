@@ -1,0 +1,64 @@
+.filter {
+    width: 100%; 
+    max-width: 150px; 
+    margin: 0px 40px 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+
+  }
+  
+  .filter h5 {
+    color: hsl(38, 51%, 59%); 
+    margin-top: 0;
+    font-size: 16px; }
+  
+  #price-range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px; 
+    border-radius: 5px;
+    background: hsl(38, 51%, 59%); 
+    outline: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  #price-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: hsl(38, 51%, 59%); 
+    cursor: pointer;
+  }
+  
+  #price-range::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: hsl(38, 51%, 59%);
+    cursor: pointer;
+  }
+  
+  .filter p {
+    color: #333; 
+    font-size: 14px; 
+    margin-bottom: 10px;
+  }
+  
+  #price-min, #price-max {
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .filter {
+      max-width: 120px; 
+      margin: 0px 20px 20px auto; }
+  }
+  
+  @media (max-width: 480px) {
+    .filter {
+      max-width: 100px; 
+      margin: 0px 10px 20px auto; 
+    }
+  }

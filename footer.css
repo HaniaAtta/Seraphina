@@ -1,0 +1,147 @@
+.footer {
+    background-color: hsl(240, 1%, 13%);
+    padding: 20px 0;
+    color: #fffefe;
+    margin-top: 8rem;
+  }
+  
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .footer .col-md-3 {
+    flex-basis: 25%;
+    margin-bottom: 3.5rem;
+  }
+  
+  .footer .col-md-6 {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+  .footer .col-md-4 {
+    flex-basis: 36%;
+    margin-bottom: 20px;
+  }
+  .footer img.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .footer h5 {
+    font-weight: bold;
+    margin-top: 0;
+  }
+  
+  .footer p {
+    margin-bottom: 10px;
+  }
+  
+  .footer a {
+    color: hsl(38, 51%, 59%);
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    color: hsl(38, 51%, 59%);
+    text-decoration: underline;
+  }
+  
+  .footer form {
+    margin-top: 10px;
+  }
+  
+  .footer input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .footer input[type="submit"] {
+    background-color: hsl(38, 51%, 59%);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: .8rem;
+
+  }
+  
+  .footer input[type="submit"]:hover {
+    background-color: hsl(38, 51%, 59%);
+
+  }
+  
+  .footer .copyright_p {
+    font-size: 12px;
+    color: #d3cdcd;
+    margin-top: 2rem;
+    margin-left: 5rem;
+    
+  }
+  
+  
+
+@media (max-width: 1200px) {
+    .footer .container {
+      max-width: 900px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .footer .container {
+      max-width: 700px;
+    }
+    .footer .col-md-3 {
+      flex-basis: 33.33%;
+    }
+    .footer .col-md-6 {
+      flex-basis: 66.67%;
+    }
+    .footer .col-md-4 {
+      flex-basis: 50%;
+      margin-top: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer .container {
+      max-width: 500px;
+    }
+    .footer .col-md-3 {
+      flex-basis: 50%;
+    }
+    .footer .col-md-6 {
+      flex-basis: 100%;
+    }
+    .footer .col-md-4 {
+      flex-basis: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer .container {
+      max-width: 300px;
+    }
+    .footer .col-md-3 {
+      flex-basis: 100%;
+    }
+    .footer .col-md-6 {
+      flex-basis: 100%;
+    }
+    .footer .col-md-4 {
+      flex-basis: 100%;
+    }
+  }

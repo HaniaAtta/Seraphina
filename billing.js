@@ -138,7 +138,7 @@ function completeOrder(event) {
   const closeModalButton = document.getElementById('close-modal');
   closeModalButton.addEventListener('click', () => {
     modal.remove();
-    window.location.href = 'home.html'; 
+    window.location.href = 'index.html'; 
   });
 }
 
